@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Support desk · Roamly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="support-page">
+    <header id="nav"></header>
+    <main>
+      <div class="sh">
+        <div class="wrap">
+          <p>
+            <span class="live"></span>Global concierge network · 24/7 active
+          </p>
+          <h1>Contact Roamly Support Desk</h1>
+          <p>
+            Questions about a booking, host communication or a custom itinerary?
+            Our team and regional hubs are ready around the clock.
+          </p>
+          <form class="sb" id="help-search">
+            <input
+              id="kb"
+              placeholder="Search help topics, booking IDs, cancellation policies…"
+              aria-label="Search help"
+              aria-controls="help-results"
+            /><button class="btn sm sun" type="submit">Find</button>
+          </form>
+          <div class="help-topics" aria-label="Popular support topics">
+            <button
+              class="chip"
+              type="button"
+              data-help-topic="reservation modification"
+            >
+              Modify reservation
+            </button>
+            <button
+              class="chip"
+              type="button"
+              data-help-topic="cancellation refund"
+            >
+              Cancellation &amp; refund
+            </button>
+            <button
+              class="chip"
+              type="button"
+              data-help-topic="host property standards"
+            >
+              Host verification
+            </button>
+            <button
+              class="chip"
+              type="button"
+              data-help-topic="emergency safety"
+            >
+              Emergency assistance
+            </button>
+          </div>
+        </div>
+      </div>
+      <section>
+        <div class="wrap">
+          <div class="grid g3">
+            <div class="card rv b">
+              <span class="tag">Avg wait 2 min</span>
+              <h3>Live concierge chat</h3>
+              <p style="color: var(--mute); margin: 8px 0 18px">
+                Instant messaging for in-transit travelers, check-in access pins
+                and last-minute directions.
+              </p>
+              <button
+                class="btn full"
+                onclick="toast('Live chat is a demo and is not connected yet.')"
+              >
+                Start live chat
+              </button>
+            </div>
+            <div class="card rv b">
+              <span class="tag">Toll-free priority</span>
+              <h3>Priority phone support</h3>
+              <p style="color: var(--mute); margin: 8px 0 18px">
+                Direct voice desk for urgent lockouts, flight delays and instant
+                booking re-routes. <b>+1 (800) 555-ROAM</b>
+              </p>
+              <button
+                class="btn ghost full"
+                onclick="
+                  toast('Callback requests are a demo and are not sent.')
+                "
+              >
+                Request call back
+              </button>
+            </div>
+            <div class="card rv b">
+              <span class="tag">SLA &lt; 2 hrs</span>
+              <h3>Submit a support ticket</h3>
+              <p style="color: var(--mute); margin: 8px 0 18px">
+                Complex inquiries about VAT invoices, security deposits and
+                multi-leg vouchers.
+              </p>
+              <a class="btn ghost full" href="#form">Open new ticket</a>
+            </div>
+          </div>
+          <div class="two support-layout" id="form">
+            <div class="panel rv">
+              <h3>Send us a message</h3>
+              <form
+                data-form
+                data-msg="Demo only: your message is ready, but no support backend is connected."
+                class="f"
+                novalidate
+              >
+                <div class="row">
+                  <label for="inquiry-type">Inquiry type</label
+                  ><select id="inquiry-type">
+                    <option>Existing reservation</option>
+                    <option>New booking</option>
+                    <option>Payments</option>
+                    <option>Host or property</option>
+                  </select>
+                </div>
+                <div class="row">
+                  <label for="booking-id">Booking ID (optional)</label
+                  ><input id="booking-id" placeholder="e.g. RM-48823" />
+                </div>
+                <div class="row">
+                  <label for="support-name">Full name</label
+                  ><input
+                    id="support-name"
+                    data-rule="name"
+                    placeholder="Eleanor Vance"
+                  />
+                </div>
+                <div class="row">
+                  <label for="support-email">Email address</label
+                  ><input
+                    id="support-email"
+                    type="email"
+                    data-rule="email"
+                    placeholder="eleanor@example.com"
+                  />
+                </div>
+                <div class="row w">
+                  <span class="field-label">Urgency</span>
+                  <div class="seg">
+                    <label
+                      ><input type="radio" name="u" checked />Standard</label
+                    ><label><input type="radio" name="u" />Priority</label
+                    ><label
+                      ><input type="radio" name="u" />Within 24h of
+                      check-in</label
+                    >
+                  </div>
+                </div>
+                <div class="row w">
+                  <label for="support-subject">Subject</label
+                  ><input
+                    id="support-subject"
+                    data-rule="req"
+                    placeholder="e.g. Requesting early luggage drop-off in Kyoto"
+                  />
+                </div>
+                <div class="row w">
+                  <label for="support-details">Details</label
+                  ><textarea
+                    id="support-details"
+                    rows="4"
+                    data-rule="req"
+                    placeholder="Include dates, property name, guest counts and what you've tried."
+                  ></textarea>
+                </div>
+                <div class="row w">
+                  <label class="drop" for="file"
+                    ><input
+                      type="file"
+                      id="file"
+                      accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png"
+                      multiple
+                      hidden
+                    /><span id="fname" role="status" aria-live="polite"
+                      >Click to browse or drop receipts and photos (PDF, JPG,
+                      PNG up to 10 MB)</span
+                    ><span class="drop-hint"
+                      >PDF, JPG or PNG · 10 MB maximum per file</span
+                    ></label
+                  >
+                </div>
+                <div class="row w">
+                  <button class="btn" type="submit">Send message</button>
+                </div>
+              </form>
+            </div>
+            <aside class="support-sidebar">
+              <div class="panel rv">
+                <h3>Example ticket status</h3>
+                <p><span class="tag">Sample · In review</span></p>
+                <b>Amalfi Coast villa late check-in request</b>
+                <p style="color: var(--mute); font-size: 14px">
+                  Sample update: an agent is verifying a late flight arrival
+                  with the villa reception.
+                </p>
+              </div>
+              <div class="panel rv">
+                <h3>Regional support hubs</h3>
+                <div class="hub">
+                  <span><b>Americas</b><br />San Francisco</span
+                  ><span>24/7</span>
+                </div>
+                <div class="hub">
+                  <span><b>EMEA</b><br />London &amp; Amsterdam</span
+                  ><span>08:00–20:00</span>
+                </div>
+                <div class="hub">
+                  <span><b>APAC</b><br />Tokyo &amp; Sydney</span
+                  ><span>09:00–21:00</span>
+                </div>
+              </div>
+              <div class="hot rv">
+                <span class="live"></span>Emergency traveler hotline<b
+                  >+1 (888) 911-ROAM</b
+                ><small
+                  >For safety issues, severe weather or critical property
+                  lockouts.</small
+                >
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+      <section class="alt" id="knowledge-base">
+        <div class="wrap">
+          <div class="head">
+            <div>
+              <h2>Knowledge base &amp; policy index</h2>
+              <p>Self-guided answers, any time.</p>
+            </div>
+          </div>
+          <div class="grid g4" id="help-results">
+            <div
+              class="card b rv"
+              data-help-entry
+              data-help-keywords="booking reservation modification guests dates"
+            >
+              <h3>Bookings &amp; payments</h3>
+              <p style="color: var(--mute)">
+                Splitting group payments, VAT invoices, regional currencies.
+              </p>
+            </div>
+            <div
+              class="card b rv"
+              data-help-entry
+              data-help-keywords="cancellation refund emergency assistance safety weather"
+            >
+              <h3>Cancellations &amp; safety</h3>
+              <p style="color: var(--mute)">
+                48-hour grace window, severe weather protocol.
+              </p>
+            </div>
+            <div
+              class="card b rv"
+              data-help-entry
+              data-help-keywords="host verification property amenities standards quiet"
+            >
+              <h3>Host &amp; property standards</h3>
+              <p style="color: var(--mute)">
+                Verified amenity audits and quiet hours.
+              </p>
+            </div>
+            <div
+              class="card b rv"
+              data-help-entry
+              data-help-keywords="account security two factor password passport"
+            >
+              <h3>Account &amp; security</h3>
+              <p style="color: var(--mute)">
+                Two-factor authentication, passport verification.
+              </p>
+            </div>
+          </div>
+          <p class="help-empty" id="help-empty" role="status" hidden>
+            No help topics matched. Try a different search or contact our
+            support team.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer id="foot"></footer>
+    <script src="js/app.js"></script>
+    <script src="js/fx.js"></script>
+    <script>
+      fx();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Find your next stay · Roamly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-nav="light">
+    <header id="nav"></header>
+    <main>
+      <section class="hero" style="padding: 0">
+        <img
+          class="bg"
+          src="images/hero.jpg"
+          alt="Sunset over a calm sea"
+          width="3840"
+          height="2160"
+        />
+        <div class="wrap">
+          <h1 data-split>Your next trip, starting here.</h1>
+          <p class="lead">
+            Find a place that feels like you. Explore destinations, compare
+            stays, and make room for something new.
+          </p>
+          <form class="search" id="search">
+            <div>
+              <label for="dest">Where would you like to go?</label
+              ><input id="dest" placeholder="City or region" />
+            </div>
+            <div><label>Check-in</label><input type="date" /></div>
+            <div><label>Check-out</label><input type="date" /></div>
+            <div>
+              <label>Guests</label
+              ><select>
+                <option>2 adults</option>
+                <option>1 adult</option>
+                <option>Family</option>
+              </select>
+            </div>
+            <button class="btn sun">Search stays</button>
+          </form>
+          <p class="note">
+            Browse inspiration without an account. Sample listings and prices;
+            no live availability.
+          </p>
+        </div>
+      </section>
+
+      <section id="destinations">
+        <div class="wrap">
+          <div class="head">
+            <div>
+              <h2>Popular destinations</h2>
+              <p>A few places to get your ideas going.</p>
+            </div>
+            <a href="#" data-toast="Destination list coming soon"
+              >Explore destinations</a
+            >
+          </div>
+          <div class="grid g4">
+            <a
+              class="card rv"
+              href="#"
+              data-toast="Lisbon guide coming soon"
+              style="text-decoration: none"
+              ><div class="ph">
+                <img
+                  src="images/lisbon.jpg"
+                  loading="lazy"
+                  alt="Lisbon hillside"
+                />
+              </div>
+              <div class="b">
+                <h3>Lisbon, Portugal</h3>
+                <small>Hillside streets and coastal day trips</small>
+              </div></a
+            >
+            <a
+              class="card rv"
+              href="#"
+              data-toast="Kyoto guide coming soon"
+              style="text-decoration: none"
+              ><div class="ph">
+                <img
+                  src="images/kyoto.jpg"
+                  loading="lazy"
+                  alt="Kyoto misty hills"
+                />
+              </div>
+              <div class="b">
+                <h3>Kyoto, Japan</h3>
+                <small>Quiet gardens and neighborhood walks</small>
+              </div></a
+            >
+            <a
+              class="card rv"
+              href="#"
+              data-toast="Copenhagen guide coming soon"
+              style="text-decoration: none"
+              ><div class="ph">
+                <img
+                  src="images/copenhagen.jpg"
+                  loading="lazy"
+                  alt="Copenhagen harbor"
+                />
+              </div>
+              <div class="b">
+                <h3>Copenhagen, Denmark</h3>
+                <small>Harbor views and design-led cafés</small>
+              </div></a
+            >
+            <a
+              class="card rv"
+              href="#"
+              data-toast="Vancouver guide coming soon"
+              style="text-decoration: none"
+              ><div class="ph">
+                <img
+                  src="images/vancouver.jpg"
+                  loading="lazy"
+                  alt="Vancouver mountains"
+                />
+              </div>
+              <div class="b">
+                <h3>Vancouver, Canada</h3>
+                <small>City comforts and mountain air</small>
+              </div></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="alt" id="stays">
+        <div class="wrap">
+          <div class="head">
+            <div>
+              <h2>Find your kind of stay</h2>
+              <p>From a quiet guesthouse to a well-placed city base.</p>
+            </div>
+            <a href="#" data-toast="All stays coming soon">Browse all stays</a>
+          </div>
+          <div class="grid g3">
+            <div class="card rv">
+              <div class="ph">
+                <img
+                  src="images/lisbon.jpg"
+                  loading="lazy"
+                  alt=""
+                  style="object-position: 20% 60%"
+                />
+              </div>
+              <div class="b">
+                <span class="tag">Guesthouse</span>
+                <h3>Alfama Courtyard House</h3>
+                <small>Lisbon · 2 guests · Wi-Fi · Shared courtyard</small>
+                <div class="price">$120 <small>USD / night</small></div>
+                <a class="btn ghost full" href="#" data-toast="Sample stay only"
+                  >Explore stay</a
+                >
+              </div>
+            </div>
+            <div class="card rv">
+              <div class="ph">
+                <img
+                  src="images/kyoto.jpg"
+                  loading="lazy"
+                  alt=""
+                  style="object-position: 70% 70%"
+                />
+              </div>
+              <div class="b">
+                <span class="tag">Small hotel</span>
+                <h3>Higashiyama Garden Stay</h3>
+                <small>Kyoto · 2 guests · Breakfast · Garden access</small>
+                <div class="price">$145 <small>USD / night</small></div>
+                <a class="btn ghost full" href="#" data-toast="Sample stay only"
+                  >Explore stay</a
+                >
+              </div>
+            </div>
+            <div class="card rv">
+              <div class="ph">
+                <img
+                  src="images/copenhagen.jpg"
+                  loading="lazy"
+                  alt=""
+                  style="object-position: 80% 70%"
+                />
+              </div>
+              <div class="b">
+                <span class="tag">Apartment</span>
+                <h3>Harbor Studio</h3>
+                <small>Copenhagen · 2 guests · Kitchen · Near metro</small>
+                <div class="price">$160 <small>USD / night</small></div>
+                <a class="btn ghost full" href="#" data-toast="Sample stay only"
+                  >Explore stay</a
+                >
+              </div>
+            </div>
+          </div>
+          <p class="note">
+            Illustrative stays only. Prices are examples, not quotes; taxes and
+            fees are not calculated.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="head">
+            <div>
+              <h2>Make the trip your own</h2>
+              <p>
+                Simple ideas for the moments between check-in and check-out.
+              </p>
+            </div>
+          </div>
+          <div class="grid g3">
+            <div class="card rv">
+              <div class="ph">
+                <img
+                  src="images/lisbon.jpg"
+                  loading="lazy"
+                  alt=""
+                  style="object-position: 60% 40%"
+                />
+              </div>
+              <div class="b">
+                <span class="tag">Lisbon · Food</span>
+                <h3>Taste your way through Lisbon</h3>
+                <small
+                  >A slow morning of market stalls and neighborhood cafés. Half
+                  day, self-guided.</small
+                >
+              </div>
+            </div>
+            <div class="card rv">
+              <div class="ph">
+                <img
+                  src="images/kyoto.jpg"
+                  loading="lazy"
+                  alt=""
+                  style="object-position: 30% 30%"
+                />
+              </div>
+              <div class="b">
+                <span class="tag">Kyoto · Outdoors</span>
+                <h3>A quieter side of Kyoto</h3>
+                <small
+                  >Morning garden walks, riverside paths and a tea break along
+                  the way.</small
+                >
+              </div>
+            </div>
+            <div class="card rv">
+              <div class="ph">
+                <img
+                  src="images/vancouver.jpg"
+                  loading="lazy"
+                  alt=""
+                  style="object-position: 40% 50%"
+                />
+              </div>
+              <div class="b">
+                <span class="tag">Vancouver · Day trip</span>
+                <h3>Mountains before lunch</h3>
+                <small
+                  >Take the morning ferry, hike a ridge, and be back for
+                  dinner.</small
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="alt">
+        <div class="wrap">
+          <div class="head">
+            <div>
+              <h2>From a first idea to a clearer plan</h2>
+              <p>How Roamly works, in three steps.</p>
+            </div>
+          </div>
+          <div class="steps">
+            <div class="step rv">
+              <h3>Choose a direction</h3>
+              <p>
+                Start with a destination, your dates and who's coming along.
+                Browsing is fine, too.
+              </p>
+            </div>
+            <div class="step rv">
+              <h3>Explore the possibilities</h3>
+              <p>
+                Compare stays and discover things to do. Look at the details
+                that matter to you.
+              </p>
+            </div>
+            <div class="step rv">
+              <h3>Shape your trip</h3>
+              <p>
+                Build a shortlist of ideas. Check current details with the
+                provider before booking.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="head">
+            <div>
+              <h2>A little perspective from travelers</h2>
+              <p>
+                Sample testimonials for this concept. Not real or verified
+                reviews.
+              </p>
+            </div>
+          </div>
+          <div class="grid g3">
+            <div class="card quote rv">
+              <p>
+                "Seeing a few neighborhoods and stays together made it easier to
+                decide what kind of trip I wanted."
+              </p>
+              <b>Alex</b><small>City-break traveler</small>
+            </div>
+            <div class="card quote rv">
+              <p>
+                "I liked starting with a simple idea for the day, then leaving
+                enough space to wander."
+              </p>
+              <b>Sam</b><small>Slow-travel enthusiast</small>
+            </div>
+            <div class="card quote rv">
+              <p>
+                "The amenity details helped us talk through what we needed
+                before making a shortlist."
+              </p>
+              <b>Jordan</b><small>Traveling with a partner</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="alt">
+        <div class="wrap" style="max-width: 860px">
+          <div class="head">
+            <div><h2>A few things you might be wondering</h2></div>
+          </div>
+          <details>
+            <summary>Can I book a stay directly through Roamly?</summary>
+            <p>
+              This prototype is for browsing and planning. Check current
+              availability and price with the provider before you book.
+            </p>
+          </details>
+          <details>
+            <summary>Do I need an account to browse?</summary>
+            <p>
+              No. You can explore destinations and stays freely. An account lets
+              you save ideas and contact support.
+            </p>
+          </details>
+          <details>
+            <summary>What do the sample nightly prices include?</summary>
+            <p>They are examples only and don't include taxes or fees.</p>
+          </details>
+          <details>
+            <summary>How can I choose a stay that suits my needs?</summary>
+            <p>
+              Compare amenities, location and guest capacity, then shortlist the
+              ones that fit your trip.
+            </p>
+          </details>
+          <details>
+            <summary>What should I do if I forget my password?</summary>
+            <p>
+              Use <a href="forgot.html"><b>Forgot password</b></a> on the
+              sign-in page and we'll email you a reset link.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="cta rv">
+            <div>
+              <h2>Ready to start your next adventure?</h2>
+              <p>
+                Join travelers exploring the world with Roamly. Create your
+                account in seconds.
+              </p>
+            </div>
+            <div style="display: flex; gap: 12px">
+              <a class="btn sun" href="#stays">Explore stays</a
+              ><a
+                class="btn"
+                style="background: rgba(255, 255, 255, 0.15)"
+                href="support.html"
+                >Contact desk</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="foot"></footer>
+    <script src="js/app.js"></script>
+    <script src="js/fx.js"></script>
+    <script>
+      fx();
+    </script>
+  </body>
+</html>
